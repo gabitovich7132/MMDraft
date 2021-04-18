@@ -21,7 +21,7 @@ class MainAlbumViewController: BaseViewController {
 // MARK: - Configure
 extension MainAlbumViewController: MainAlbumViewInput {
     private func setupSubviews() {
-        
+        navigationItem.title = "Main"
     }
 }
 

@@ -8,12 +8,26 @@
 
 import Foundation
 
-class MainAlbumFlowCoordinator: BaseFlowCoordinator<MainAlbumFlowRoutingExitHandler> {    
+class MainAlbumFlowCoordinator: BaseFlowCoordinator<MainAlbumFlowRoutingExitHandler> {
+    override init(router: CoordinatorRouterProtocol) {
+        super.init(router: router)
+    }
+    
     override func start(with option: DeepLinkOptionProtocol?) {
         super.start(with: option)
+        startMainModule()
     }
 }
 
-extension MainAlbumFlowCoordinator {
+// MARK: - MainAlbumCoordinatorExitRoutingProtocol
+extension MainAlbumFlowCoordinator: MainAlbumCoordinatorExitRoutingProtocol {
+    
+}
 
+private extension MainAlbumFlowCoordinator {
+    func startMainModule() {
+        let coordinator = MainAlbumCoordinatorAssembly().build(router: router, routingHandler: self)
+        coordinator.start()
+        addChild(coordinator)
+    }
 }
