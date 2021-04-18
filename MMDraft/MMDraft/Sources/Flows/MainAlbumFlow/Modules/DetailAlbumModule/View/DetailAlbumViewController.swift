@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Rswift
 
 class DetailAlbumViewController: BaseViewController {
     
@@ -30,6 +31,7 @@ class DetailAlbumViewController: BaseViewController {
 // MARK: - Configure
 extension DetailAlbumViewController: DetailAlbumViewInput {
     private func setupSubviews() {
+        configureNavigation()
         configureScrollView()
         setupGestureRecognizer()
         loadImage()
@@ -52,6 +54,10 @@ extension DetailAlbumViewController {
         } else {
             scrollView.setZoomScale(1, animated: true)
         }
+    }
+    
+    @objc func handleDismiss(_ sender: UIBarButtonItem) {
+        output?.didClose()
     }
 }
 
@@ -83,6 +89,10 @@ private extension DetailAlbumViewController {
         gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
         gestureRecognizer.numberOfTapsRequired = 2
         view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func configureNavigation() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.close(), style: .done, target: self, action: #selector(handleDismiss(_:)))
     }
     
     func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
