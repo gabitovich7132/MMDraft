@@ -24,24 +24,33 @@ final class AppCoordinator: BaseCoordinator<AppCoordinatorExitPoint>, AppCoordin
     }
     
     override func start(with option: DeepLinkOptionProtocol?) {
-        
+        startMainFlow()
     }
 }
 
 extension AppCoordinator {
-    func performRouteForBackRouting(_ coordinator: CoordinatorProtocol) {
-        
-    }
+    func performRouteForBackRouting(_ coordinator: CoordinatorProtocol) {}
     
-    func performRouteForCloseRouting(_ coordinator: CoordinatorProtocol) {
-        
-    }
+    func performRouteForCloseRouting(_ coordinator: CoordinatorProtocol) {}
     
-    func performModuleRemovedRouting(_ coordinator: CoordinatorProtocol) {
-        
-    }
+    func performModuleRemovedRouting(_ coordinator: CoordinatorProtocol) {}
     
-    func performRouteForBackOrCloseRouting(_ coordinator: CoordinatorProtocol) {
+    func performRouteForBackOrCloseRouting(_ coordinator: CoordinatorProtocol) {}
+}
+
+// MARK: - MainAlbumFlowRoutingExitHandler
+extension AppCoordinator: MainAlbumFlowRoutingExitHandler {
+    
+}
+
+private extension AppCoordinator {
+    func startMainFlow() {
+        let flowCoordinator = MainAlbumFlowCoordinatorAssembly().build(self)
+        flowCoordinator.start()
+        addChild(flowCoordinator)
         
+        if let toPresent = flowCoordinator.toPresent() {
+            router.showScreen(toPresent)
+        }
     }
 }
