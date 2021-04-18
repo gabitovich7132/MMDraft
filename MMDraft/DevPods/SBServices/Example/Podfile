@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SBServices_Example' do
+  pod 'SBServices', :path => '../'
+
+  target 'SBServices_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
