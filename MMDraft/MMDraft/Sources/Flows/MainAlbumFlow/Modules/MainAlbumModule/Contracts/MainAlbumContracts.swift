@@ -20,7 +20,7 @@ protocol MainAlbumModuleOutput {
 
 // View Input
 protocol MainAlbumViewInput: class {
-    
+    func setMemeList(list: [AlbumModel])
 }
 
 // View Output
@@ -30,7 +30,7 @@ protocol MainAlbumViewOutput: ViewOutputProtocol {
 
 // Interactor Input
 protocol MainAlbumInteractorInput {
-    
+    func getMemes(progressBlock: BlockObject<MainAlbumScreenState, Void>)
 }
 
 // Interactor Output

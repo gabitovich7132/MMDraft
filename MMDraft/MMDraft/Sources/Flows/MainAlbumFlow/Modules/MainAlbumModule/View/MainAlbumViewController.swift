@@ -11,6 +11,8 @@ import UIKit
 class MainAlbumViewController: BaseViewController {
     var output: MainAlbumViewOutput?
     
+    private var memeList = [AlbumModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
@@ -27,7 +29,9 @@ extension MainAlbumViewController: MainAlbumViewInput {
 
 // MARK: View Input
 extension MainAlbumViewController {
-    
+    func setMemeList(list: [AlbumModel]) {
+        memeList = list
+    }
 }
 
 // MARK: Button Action
