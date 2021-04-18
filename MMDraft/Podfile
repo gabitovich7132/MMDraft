@@ -1,7 +1,18 @@
 platform :ios, '12.0'
 
+def private_frameworksCommon
+  use_frameworks!
+
+  pod 'MBCommon', :path => 'DevPods/MBCommon'
+  pod 'MBCommonUI', :path => 'DevPods/MBCommonUI'
+  pod 'SBNetworking', :path => 'DevPods/SBNetworking'
+  pod 'SBServices', :path => 'DevPods/SBServices'
+end
+
 target 'MMDraft' do
   use_frameworks!
+
+  private_frameworksCommon
 
   pod 'R.swift'
   pod 'Alamofire'
