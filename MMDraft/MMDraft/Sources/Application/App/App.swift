@@ -13,9 +13,6 @@ protocol AppProtocol {
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     func applicationDidFinishLaunching(_ application: UIApplication,
                                        _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-    func applicationDidReceiveRemoteNotification(_ application: UIApplication,
-                                                 _ userInfo: [AnyHashable: Any],
-                                                 _ completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     func applicationContinueUserActivity(_ application: UIApplication,
                                          _ userActivity: NSUserActivity,
                                          _ restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
@@ -44,12 +41,6 @@ final class App: NSObject, AppProtocol {
         let deepLink = DeepLinkOption.build(with: notification)
         appCoordinator.start(with: deepLink)
         return true
-    }
-    
-    func applicationDidReceiveRemoteNotification(_ application: UIApplication, _ userInfo: [AnyHashable: Any], _ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        let dict = userInfo as? [String: AnyObject]
-        let deepLink = DeepLinkOption.build(with: dict)
-        appCoordinator.start(with: deepLink)
     }
     
     func applicationContinueUserActivity(_ application: UIApplication, _ userActivity: NSUserActivity, _ restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {

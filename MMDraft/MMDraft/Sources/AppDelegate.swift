@@ -24,12 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication,
-                     didReceiveRemoteNotification  userInfo: [AnyHashable: Any],
-                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        app.applicationDidReceiveRemoteNotification(application, userInfo, completionHandler)
-    }
-    
-    func application(_ application: UIApplication,
                      continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         app.applicationContinueUserActivity(application, userActivity, restorationHandler)
