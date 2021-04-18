@@ -46,6 +46,7 @@
 		CB63B1E2262CD5D6007F1BB7 /* DetailAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB63B1D7262CD5D6007F1BB7 /* DetailAlbumViewController.xib */; };
 		CB63B1E3262CD5D6007F1BB7 /* DetailAlbumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B1D9262CD5D6007F1BB7 /* DetailAlbumInteractor.swift */; };
 		CB63B1E4262CD5D6007F1BB7 /* DetailAlbumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B1DB262CD5D6007F1BB7 /* DetailAlbumRouter.swift */; };
+		CB63B206262CF185007F1BB7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B205262CF185007F1BB7 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		CB63B1D7262CD5D6007F1BB7 /* DetailAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailAlbumViewController.xib; sourceTree = "<group>"; };
 		CB63B1D9262CD5D6007F1BB7 /* DetailAlbumInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlbumInteractor.swift; sourceTree = "<group>"; };
 		CB63B1DB262CD5D6007F1BB7 /* DetailAlbumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlbumRouter.swift; sourceTree = "<group>"; };
+		CB63B205262CF185007F1BB7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		CB63AEDF262CA7CC007F1BB7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB63B205262CF185007F1BB7 /* R.generated.swift */,
 				CB63ADE4262C935E007F1BB7 /* Assets.xcassets */,
 				CB63ADE6262C935E007F1BB7 /* LaunchScreen.storyboard */,
 				CB63ADE9262C935E007F1BB7 /* Info.plist */,
@@ -435,12 +438,12 @@
 			buildConfigurationList = CB63ADEC262C935E007F1BB7 /* Build configuration list for PBXNativeTarget "MMDraft" */;
 			buildPhases = (
 				A6A0A159CA74AB498ED24926 /* [CP] Check Pods Manifest.lock */,
+				CB63AE06262C9C85007F1BB7 /* R.swift */,
 				CB63ADD4262C935C007F1BB7 /* Sources */,
 				CB63ADD5262C935C007F1BB7 /* Frameworks */,
 				CB63ADD6262C935C007F1BB7 /* Resources */,
 				CB63AE04262C9C66007F1BB7 /* SwiftLint */,
 				485C8672C3E2A4FD6ED7BA30 /* [CP] Embed Pods Frameworks */,
-				CB63AE06262C9C85007F1BB7 /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -610,6 +613,7 @@
 				CB63AF9B262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift in Sources */,
 				CB63AEFA262CA922007F1BB7 /* AppCoordinator.swift in Sources */,
 				CB63B1E4262CD5D6007F1BB7 /* DetailAlbumRouter.swift in Sources */,
+				CB63B206262CF185007F1BB7 /* R.generated.swift in Sources */,
 				CB63AFB7262CABE5007F1BB7 /* MainAlbumAssembly.swift in Sources */,
 				CB63B1DC262CD5D6007F1BB7 /* DetailAlbumCoordinatorAssembly.swift in Sources */,
 				CB63B115262CBEE6007F1BB7 /* MainAlbumScreenState.swift in Sources */,
