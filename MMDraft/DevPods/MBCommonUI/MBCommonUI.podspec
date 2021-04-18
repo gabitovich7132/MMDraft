@@ -34,10 +34,6 @@ TODO: Add long description of the pod here.
   
   s.dependency 'MBCommon', '~> 0.1.0'
   s.dependency 'SnapKit'
-  s.dependency 'InputMask'
-  s.dependency 'FloatingPanel'
-  s.dependency 'NVActivityIndicatorView'
-  s.dependency 'SkeletonView'
   s.source_files = 'MBCommonUI/Classes/**/*.{h,m,swift,storyboard,xib}'
   s.resources = 'MBCommonUI/Assets/*.{xcassets,bundle}'
   

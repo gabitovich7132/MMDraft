@@ -34,8 +34,6 @@ TODO: Add long description of the pod here.
   s.dependency 'SBNetworking', '~> 0.1.0'
   s.dependency 'MBCommon', '~> 0.1.0'
   s.dependency 'R.swift'
-  s.dependency 'KeychainAccess'
-  s.dependency 'Socket.IO-Client-Swift'
   
   # s.resource_bundles = {
   #   'SBServices' => ['SBServices/Assets/*.png']
