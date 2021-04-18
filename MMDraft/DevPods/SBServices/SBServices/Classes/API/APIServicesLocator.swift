@@ -26,6 +26,12 @@ public extension ApiResponseProtocol {
     }
 }
 
-public protocol APIServicesLocatorProtocol {}
+public protocol APIServicesLocatorProtocol {
+    func imgFlipService() -> ImgFlipServiceProtocol
+}
 
-public extension APIServicesLocatorProtocol {}
+public extension APIServicesLocatorProtocol {
+    func imgFlipService() -> ImgFlipServiceProtocol {
+        ImgFlipService()
+    }
+}
