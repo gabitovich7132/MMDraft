@@ -8,6 +8,7 @@
 
 import UIKit
 import MBCommon
+import ViewAnimator
 
 class MainAlbumViewController: BaseViewController, Reusable {
     
@@ -16,8 +17,8 @@ class MainAlbumViewController: BaseViewController, Reusable {
     
     // MARK: - Variables
     var output: MainAlbumViewOutput?
-    
     private var memeList = [AlbumModel]()
+    private let animations = [AnimationType.vector((CGVector(dx: 0, dy: 30)))]
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -30,7 +31,7 @@ class MainAlbumViewController: BaseViewController, Reusable {
 // MARK: - Configure
 extension MainAlbumViewController: MainAlbumViewInput {
     private func setupSubviews() {
-        navigationItem.title = "Main"
+        navigationItem.title = "Memes"
         configureCollectionView()
     }
 }
@@ -39,7 +40,18 @@ extension MainAlbumViewController: MainAlbumViewInput {
 extension MainAlbumViewController {
     func setMemeList(list: [AlbumModel]) {
         memeList = list
-        collectionView.reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.33) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            self.collectionView.reloadData()
+            
+            self.collectionView.performBatchUpdates({
+                UIView.animate(views: self.collectionView.orderedVisibleCells, animations: self.animations)
+            }, completion: nil)
+        }
     }
 }
 
@@ -86,7 +98,7 @@ extension MainAlbumViewController: UICollectionViewDelegateFlowLayout {
 
 private extension MainAlbumViewController {
     func configureCollectionView() {
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 16, bottom: 0, right: 16)
         
         collectionView.delegate = self
         collectionView.dataSource = self
