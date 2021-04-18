@@ -6,9 +6,7 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
 import SnapKit
-import SkeletonView
 
 public enum ViewDataState {
     case loading
@@ -24,8 +22,6 @@ public protocol BaseViewInput: class {
 open class BaseViewController: UIViewController, ViewControllerProtocol {
     open var isShowNavigationBar = true
     open var isHidesBarsOnSwipe = false
-    
-    private let loadingIndicator = LoadingIndicatorView()
     
     public init() {
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
@@ -61,11 +57,13 @@ open class BaseViewController: UIViewController, ViewControllerProtocol {
     public func updateState(_ state: ViewDataState) {
         switch state {
         case .loading:
-            loadingIndicator.startAnimation(in: view)
+            //loadingIndicator.startAnimation(in: view)
+            break
         case .loaded:
-            loadingIndicator.stopAnimation()
+            //loadingIndicator.stopAnimation()
+            break
         case .error(let error):
-            loadingIndicator.stopAnimation()
+            //loadingIndicator.stopAnimation()
             showAlert(error: error)
         }
     }
@@ -73,11 +71,13 @@ open class BaseViewController: UIViewController, ViewControllerProtocol {
     public func updateSkeletonState(_ state: ViewDataState) {
         switch state {
         case .loading:
-            view.showAnimatedGradientSkeleton()
+            //view.showAnimatedGradientSkeleton()
+            break
         case .loaded:
-            view.stopSkeletonAnimation()
+            //view.stopSkeletonAnimation()
+            break
         case .error(let error):
-            view.stopSkeletonAnimation()
+            //view.stopSkeletonAnimation()
             showAlert(error: error)
         }
     }
