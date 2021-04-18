@@ -22,12 +22,4 @@ public struct DataResponse: ResponseProtocol {
         
         return DataResponse(httpResponse: response, data: data)
     }
-    
-    public static func responseList(_ data: Data?, _ response: HTTPURLResponse) throws -> [DataResponse] {
-        guard let data = data else {
-            throw DataError.noData
-        }
-        
-        return [DataResponse(httpResponse: response, data: data)]
-    }
 }

@@ -33,6 +33,10 @@
 		CB63AFBB262CABE5007F1BB7 /* MainAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */; };
 		CB63AFBC262CABE5007F1BB7 /* MainAlbumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB2262CABE5007F1BB7 /* MainAlbumInteractor.swift */; };
 		CB63AFBD262CABE5007F1BB7 /* MainAlbumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */; };
+		CB63B115262CBEE6007F1BB7 /* MainAlbumScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B114262CBEE6007F1BB7 /* MainAlbumScreenState.swift */; };
+		CB63B119262CBF08007F1BB7 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B118262CBF08007F1BB7 /* AlbumModel.swift */; };
+		CB63B181262CC745007F1BB7 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB63B180262CC745007F1BB7 /* AlbumCell.xib */; };
+		CB63B184262CC751007F1BB7 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63B183262CC751007F1BB7 /* AlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumViewController.swift; sourceTree = "<group>"; };
 		CB63AFB2262CABE5007F1BB7 /* MainAlbumInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumInteractor.swift; sourceTree = "<group>"; };
 		CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumRouter.swift; sourceTree = "<group>"; };
+		CB63B114262CBEE6007F1BB7 /* MainAlbumScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumScreenState.swift; sourceTree = "<group>"; };
+		CB63B118262CBF08007F1BB7 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		CB63B180262CC745007F1BB7 /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		CB63B183262CC751007F1BB7 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,7 @@
 		CB63AFA4262CABE5007F1BB7 /* MainAlbumModule */ = {
 			isa = PBXGroup;
 			children = (
+				CB63B117262CBEFF007F1BB7 /* Entity */,
 				CB63AFA5262CABE5007F1BB7 /* Coordinator */,
 				CB63AFA8262CABE5007F1BB7 /* Assembly */,
 				CB63AFAA262CABE5007F1BB7 /* Contracts */,
@@ -279,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				CB63AFAD262CABE5007F1BB7 /* MainAlbumPresenter.swift */,
+				CB63B114262CBEE6007F1BB7 /* MainAlbumScreenState.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -288,6 +298,7 @@
 			children = (
 				CB63AFAF262CABE5007F1BB7 /* MainAlbumViewController.xib */,
 				CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */,
+				CB63B11C262CC284007F1BB7 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +317,23 @@
 				CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		CB63B117262CBEFF007F1BB7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CB63B118262CBF08007F1BB7 /* AlbumModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CB63B11C262CC284007F1BB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB63B180262CC745007F1BB7 /* AlbumCell.xib */,
+				CB63B183262CC751007F1BB7 /* AlbumCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +401,7 @@
 				CB63ADE8262C935E007F1BB7 /* LaunchScreen.storyboard in Resources */,
 				CB63ADE5262C935E007F1BB7 /* Assets.xcassets in Resources */,
 				CB63AFBA262CABE5007F1BB7 /* MainAlbumViewController.xib in Resources */,
+				CB63B181262CC745007F1BB7 /* AlbumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,11 +505,14 @@
 				CB63AFB5262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift in Sources */,
 				CB63AF08262CA9BE007F1BB7 /* AppServiceLocator.swift in Sources */,
 				CB63AF01262CA982007F1BB7 /* RunConfigurator.swift in Sources */,
+				CB63B184262CC751007F1BB7 /* AlbumCell.swift in Sources */,
 				CB63AEF6262CA90D007F1BB7 /* AppInteractor.swift in Sources */,
+				CB63B119262CBF08007F1BB7 /* AlbumModel.swift in Sources */,
 				CB63AFB8262CABE5007F1BB7 /* MainAlbumContracts.swift in Sources */,
 				CB63AF9B262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift in Sources */,
 				CB63AEFA262CA922007F1BB7 /* AppCoordinator.swift in Sources */,
 				CB63AFB7262CABE5007F1BB7 /* MainAlbumAssembly.swift in Sources */,
+				CB63B115262CBEE6007F1BB7 /* MainAlbumScreenState.swift in Sources */,
 				CB63AF0B262CA9D3007F1BB7 /* App.swift in Sources */,
 				CB63AEFD262CA962007F1BB7 /* AppCoordinatorLocator.swift in Sources */,
 				CB63AF05262CA99D007F1BB7 /* AppAppearance.swift in Sources */,

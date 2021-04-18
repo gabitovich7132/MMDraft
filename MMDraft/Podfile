@@ -19,5 +19,6 @@ target 'MMDraft' do
   pod 'SwiftLint'
   pod 'SnapKit'
   pod 'Kingfisher'
+  pod 'ViewAnimator'
 
 end

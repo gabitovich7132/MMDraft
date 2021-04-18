@@ -14,6 +14,6 @@ public enum SBSchema: String {
 
 public class ServicesConstants {
     public static var HOST: String {
-        return "jsonplaceholder.typicode.com"
+        return "api.imgflip.com"
     }
 }
