@@ -64,7 +64,17 @@ extension MainAlbumViewController {
 extension MainAlbumViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
         
+        UIView.animate(withDuration: 0.5) {
+            cell?.alpha = 0.5
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                cell?.alpha = 1
+            }
+        }
+
+        output?.didSelectAlbum(object: memeList[indexPath.item])
     }
 }
 

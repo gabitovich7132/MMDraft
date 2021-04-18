@@ -13,5 +13,6 @@ final class AppAppearance {
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().tintColor = R.color.mainBlack()
     }
 }

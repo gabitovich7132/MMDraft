@@ -22,5 +22,7 @@ class MainAlbumCoordinator: BaseCoordinator<MainAlbumCoordinatorExitRoutingProto
 }
 
 extension MainAlbumCoordinator: MainAlbumRoutingHandlingProtocol {
-    
+    func performRouteForDetail(_ object: AlbumModel) {
+        coordinationExitPoint?.performRouteForDetail(self, object)
+    }
 }

@@ -32,7 +32,9 @@ extension MainAlbumPresenter: MainAlbumModuleInput {
 
 // MARK: View Output
 extension MainAlbumPresenter: MainAlbumViewOutput {
-    
+    func didSelectAlbum(object: AlbumModel) {
+        router?.routeForDetail(object)
+    }
 }
 
 // MARK: Interactor Output

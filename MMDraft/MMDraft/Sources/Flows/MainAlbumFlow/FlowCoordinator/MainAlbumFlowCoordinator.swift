@@ -21,6 +21,13 @@ class MainAlbumFlowCoordinator: BaseFlowCoordinator<MainAlbumFlowRoutingExitHand
 
 // MARK: - MainAlbumCoordinatorExitRoutingProtocol
 extension MainAlbumFlowCoordinator: MainAlbumCoordinatorExitRoutingProtocol {
+    func performRouteForDetail(_ coordinator: CoordinatorProtocol, _ object: AlbumModel) {
+        startDetailModule(.detailAlbum(object))
+    }
+}
+
+// MARK: - DetailAlbumCoordinatorExitRoutingProtocol
+extension MainAlbumFlowCoordinator: DetailAlbumCoordinatorExitRoutingProtocol {
     
 }
 
@@ -28,6 +35,12 @@ private extension MainAlbumFlowCoordinator {
     func startMainModule() {
         let coordinator = MainAlbumCoordinatorAssembly().build(router: router, routingHandler: self)
         coordinator.start()
+        addChild(coordinator)
+    }
+    
+    func startDetailModule(_ option: DeepLinkOption) {
+        let coordinator = DetailAlbumCoordinatorAssembly().build(router: router, routingHandler: self)
+        coordinator.start(with: option)
         addChild(coordinator)
     }
 }
