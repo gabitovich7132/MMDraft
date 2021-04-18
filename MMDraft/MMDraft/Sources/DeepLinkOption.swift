@@ -16,6 +16,7 @@ public enum NavigationOption: DeepLinkOptionProtocol {
 
 public enum DeepLinkOption: DeepLinkOptionProtocol {
     case main
+    case detailAlbum(AlbumModel)
     
     public static func build(with userActivity: NSUserActivity) -> DeepLinkOption? {
         nil
@@ -36,6 +37,8 @@ public enum DeepLinkOption: DeepLinkOptionProtocol {
         switch self {
         case .main:
             return "main_flow"
+        case .detailAlbum:
+            return "detailAlbum"
         }
     }
 }
