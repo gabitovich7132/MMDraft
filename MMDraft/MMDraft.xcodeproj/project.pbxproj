@@ -24,6 +24,15 @@
 		CB63AF9B262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AF98262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift */; };
 		CB63AF9C262CAB9E007F1BB7 /* MainAlbumFlowExitRoutingHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AF99262CAB9E007F1BB7 /* MainAlbumFlowExitRoutingHandlerProtocol.swift */; };
 		CB63AF9D262CAB9E007F1BB7 /* MainAlbumFlowCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AF9A262CAB9E007F1BB7 /* MainAlbumFlowCoordinatorAssembly.swift */; };
+		CB63AFB5262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFA6262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift */; };
+		CB63AFB6262CABE5007F1BB7 /* MainAlbumCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFA7262CABE5007F1BB7 /* MainAlbumCoordinator.swift */; };
+		CB63AFB7262CABE5007F1BB7 /* MainAlbumAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFA9262CABE5007F1BB7 /* MainAlbumAssembly.swift */; };
+		CB63AFB8262CABE5007F1BB7 /* MainAlbumContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFAB262CABE5007F1BB7 /* MainAlbumContracts.swift */; };
+		CB63AFB9262CABE5007F1BB7 /* MainAlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFAD262CABE5007F1BB7 /* MainAlbumPresenter.swift */; };
+		CB63AFBA262CABE5007F1BB7 /* MainAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB63AFAF262CABE5007F1BB7 /* MainAlbumViewController.xib */; };
+		CB63AFBB262CABE5007F1BB7 /* MainAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */; };
+		CB63AFBC262CABE5007F1BB7 /* MainAlbumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB2262CABE5007F1BB7 /* MainAlbumInteractor.swift */; };
+		CB63AFBD262CABE5007F1BB7 /* MainAlbumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,15 @@
 		CB63AF98262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumFlowCoordinator.swift; sourceTree = "<group>"; };
 		CB63AF99262CAB9E007F1BB7 /* MainAlbumFlowExitRoutingHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumFlowExitRoutingHandlerProtocol.swift; sourceTree = "<group>"; };
 		CB63AF9A262CAB9E007F1BB7 /* MainAlbumFlowCoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumFlowCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		CB63AFA6262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		CB63AFA7262CABE5007F1BB7 /* MainAlbumCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumCoordinator.swift; sourceTree = "<group>"; };
+		CB63AFA9262CABE5007F1BB7 /* MainAlbumAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumAssembly.swift; sourceTree = "<group>"; };
+		CB63AFAB262CABE5007F1BB7 /* MainAlbumContracts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumContracts.swift; sourceTree = "<group>"; };
+		CB63AFAD262CABE5007F1BB7 /* MainAlbumPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumPresenter.swift; sourceTree = "<group>"; };
+		CB63AFAF262CABE5007F1BB7 /* MainAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainAlbumViewController.xib; sourceTree = "<group>"; };
+		CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumViewController.swift; sourceTree = "<group>"; };
+		CB63AFB2262CABE5007F1BB7 /* MainAlbumInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumInteractor.swift; sourceTree = "<group>"; };
+		CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAlbumRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				CB63AF97262CAB9E007F1BB7 /* FlowCoordinator */,
+				CB63AF9F262CABC1007F1BB7 /* Modules */,
 			);
 			path = MainAlbumFlow;
 			sourceTree = "<group>";
@@ -207,6 +226,86 @@
 				CB63AF9A262CAB9E007F1BB7 /* MainAlbumFlowCoordinatorAssembly.swift */,
 			);
 			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		CB63AF9F262CABC1007F1BB7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFA4262CABE5007F1BB7 /* MainAlbumModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CB63AFA4262CABE5007F1BB7 /* MainAlbumModule */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFA5262CABE5007F1BB7 /* Coordinator */,
+				CB63AFA8262CABE5007F1BB7 /* Assembly */,
+				CB63AFAA262CABE5007F1BB7 /* Contracts */,
+				CB63AFAC262CABE5007F1BB7 /* Presenter */,
+				CB63AFAE262CABE5007F1BB7 /* View */,
+				CB63AFB1262CABE5007F1BB7 /* Interactor */,
+				CB63AFB3262CABE5007F1BB7 /* Router */,
+			);
+			path = MainAlbumModule;
+			sourceTree = "<group>";
+		};
+		CB63AFA5262CABE5007F1BB7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFA6262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift */,
+				CB63AFA7262CABE5007F1BB7 /* MainAlbumCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CB63AFA8262CABE5007F1BB7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFA9262CABE5007F1BB7 /* MainAlbumAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CB63AFAA262CABE5007F1BB7 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFAB262CABE5007F1BB7 /* MainAlbumContracts.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		CB63AFAC262CABE5007F1BB7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFAD262CABE5007F1BB7 /* MainAlbumPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CB63AFAE262CABE5007F1BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFAF262CABE5007F1BB7 /* MainAlbumViewController.xib */,
+				CB63AFB0262CABE5007F1BB7 /* MainAlbumViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB63AFB1262CABE5007F1BB7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFB2262CABE5007F1BB7 /* MainAlbumInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB63AFB3262CABE5007F1BB7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CB63AFB4262CABE5007F1BB7 /* MainAlbumRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +372,7 @@
 			files = (
 				CB63ADE8262C935E007F1BB7 /* LaunchScreen.storyboard in Resources */,
 				CB63ADE5262C935E007F1BB7 /* Assets.xcassets in Resources */,
+				CB63AFBA262CABE5007F1BB7 /* MainAlbumViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,16 +468,24 @@
 				CB63AF9D262CAB9E007F1BB7 /* MainAlbumFlowCoordinatorAssembly.swift in Sources */,
 				CB63AEF3262CA8F7007F1BB7 /* RootRouter.swift in Sources */,
 				CB63AEEF262CA8E9007F1BB7 /* RootRouterLocation.swift in Sources */,
+				CB63AFBC262CABE5007F1BB7 /* MainAlbumInteractor.swift in Sources */,
 				CB63AEE5262CA837007F1BB7 /* DeepLinkOption.swift in Sources */,
+				CB63AFBB262CABE5007F1BB7 /* MainAlbumViewController.swift in Sources */,
 				CB63AF9C262CAB9E007F1BB7 /* MainAlbumFlowExitRoutingHandlerProtocol.swift in Sources */,
+				CB63AFB9262CABE5007F1BB7 /* MainAlbumPresenter.swift in Sources */,
+				CB63AFB5262CABE5007F1BB7 /* MainAlbumCoordinatorAssembly.swift in Sources */,
 				CB63AF08262CA9BE007F1BB7 /* AppServiceLocator.swift in Sources */,
 				CB63AF01262CA982007F1BB7 /* RunConfigurator.swift in Sources */,
 				CB63AEF6262CA90D007F1BB7 /* AppInteractor.swift in Sources */,
+				CB63AFB8262CABE5007F1BB7 /* MainAlbumContracts.swift in Sources */,
 				CB63AF9B262CAB9E007F1BB7 /* MainAlbumFlowCoordinator.swift in Sources */,
 				CB63AEFA262CA922007F1BB7 /* AppCoordinator.swift in Sources */,
+				CB63AFB7262CABE5007F1BB7 /* MainAlbumAssembly.swift in Sources */,
 				CB63AF0B262CA9D3007F1BB7 /* App.swift in Sources */,
 				CB63AEFD262CA962007F1BB7 /* AppCoordinatorLocator.swift in Sources */,
 				CB63AF05262CA99D007F1BB7 /* AppAppearance.swift in Sources */,
+				CB63AFB6262CABE5007F1BB7 /* MainAlbumCoordinator.swift in Sources */,
+				CB63AFBD262CABE5007F1BB7 /* MainAlbumRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
