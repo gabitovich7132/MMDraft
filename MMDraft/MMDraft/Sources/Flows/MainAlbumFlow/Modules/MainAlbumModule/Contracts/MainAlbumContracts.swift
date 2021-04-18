@@ -26,6 +26,7 @@ protocol MainAlbumViewInput: class {
 // View Output
 protocol MainAlbumViewOutput: ViewOutputProtocol {
     func viewDidLoad()
+    func didSelectAlbum(object: AlbumModel)
 }
 
 // Interactor Input
@@ -40,15 +41,15 @@ protocol MainAlbumInteractorOutput: class {
 
 // Router
 protocol MainAlbumRouterInputProtocol: AlertRoutableProtocol, BaseModuleRoutableProtocol {
-    
+    func routeForDetail(_ object: AlbumModel)
 }
 
 // Routing Handling
 protocol MainAlbumRoutingHandlingProtocol: ModuleRoutingHandlingProtocol {
-    
+    func performRouteForDetail(_ object: AlbumModel)
 }
 
 // Coordinator Routing Handling
 protocol MainAlbumCoordinatorExitRoutingProtocol: FlowExitPointProtocol {
-    
+    func performRouteForDetail(_ coordinator: CoordinatorProtocol, _ object: AlbumModel)
 }

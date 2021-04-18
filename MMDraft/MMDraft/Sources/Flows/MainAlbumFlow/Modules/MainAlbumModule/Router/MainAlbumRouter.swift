@@ -12,5 +12,7 @@ class MainAlbumRouter: BaseModuleRouter<MainAlbumRoutingHandlingProtocol> {
 }
 
 extension MainAlbumRouter: MainAlbumRouterInputProtocol {
-    
+    func routeForDetail(_ object: AlbumModel) {
+        moduleRoutingHandler?.performRouteForDetail(object)
+    }
 }

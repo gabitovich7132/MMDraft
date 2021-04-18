@@ -64,7 +64,7 @@ extension MainAlbumViewController {
 extension MainAlbumViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        
+        output?.didSelectAlbum(object: memeList[indexPath.item])
     }
 }
 
