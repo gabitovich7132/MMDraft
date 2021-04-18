@@ -1,5 +1,3 @@
-# P.S. Switch to 'development' branch
-
 # Packet manager
 https://cocoapods.org/
 
