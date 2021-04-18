@@ -34,7 +34,9 @@ class AlbumCell: UICollectionViewCell {
         }
         
         imageView.kf.indicatorType = .activity
-        imageView.kf.setImage(with: url)
+        
+        let processor = DownsamplingImageProcessor(size: CGSize(width: 150, height: 150))
+        imageView.kf.setImage(with: url, options: [.processor(processor)])
     }
 }
 
@@ -42,8 +44,6 @@ private extension AlbumCell {
     func setups() {
         clipsToBounds = true
         layer.cornerRadius = 8
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.withAlphaComponent(0.6).cgColor
         loadFromNib()
     }
 }
