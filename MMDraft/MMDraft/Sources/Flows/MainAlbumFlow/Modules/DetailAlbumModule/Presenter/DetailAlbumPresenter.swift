@@ -25,7 +25,14 @@ extension DetailAlbumPresenter {
 
 // MARK: Module Input
 extension DetailAlbumPresenter: DetailAlbumModuleInput {
-    
+    func setOption(_ option: DeepLinkOption) {
+        switch option {
+        case .detailAlbum(let object):
+            view?.setAlbum(object: object)
+        default:
+            break
+        }
+    }
 }
 
 // MARK: View Output

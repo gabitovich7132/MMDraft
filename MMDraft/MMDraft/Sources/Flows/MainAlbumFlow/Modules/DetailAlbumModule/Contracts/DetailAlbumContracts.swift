@@ -10,7 +10,7 @@ import Foundation
 
 // Module Input
 protocol DetailAlbumModuleInput {
-    
+    func setOption(_ option: DeepLinkOption)
 }
 
 // Module Output
@@ -20,7 +20,7 @@ protocol DetailAlbumModuleOutput {
 
 // View Input
 protocol DetailAlbumViewInput: class {
-    
+    func setAlbum(object: AlbumModel)
 }
 
 // View Output

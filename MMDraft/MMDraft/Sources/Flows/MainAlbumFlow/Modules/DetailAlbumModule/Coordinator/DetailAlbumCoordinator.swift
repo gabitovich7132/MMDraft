@@ -12,12 +12,18 @@ protocol DetailAlbumCoordinatorProtocol: CoordinatorProtocol {
 
 class DetailAlbumCoordinator: BaseCoordinator<DetailAlbumCoordinatorExitRoutingProtocol>, DetailAlbumCoordinatorProtocol {
     override func start(with option: DeepLinkOptionProtocol?) {
+        guard let option = option as? DeepLinkOption else {
+            return
+        }
+        
         let module = DetailAlbumAssembly().build(nil, self)
+        module.input.setOption(option)
+        
         guard let toPresent = module.toPresent() else {
             return
         }
-        let navController = UINavigationController(rootViewController: toPresent)
-        router.showScreen(navController)
+        toPresent.modalPresentationStyle = .custom
+        router.present(toPresent)
     }
 }
 
