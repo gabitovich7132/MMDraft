@@ -22,8 +22,8 @@ class DetailAlbumCoordinator: BaseCoordinator<DetailAlbumCoordinatorExitRoutingP
         guard let toPresent = module.toPresent() else {
             return
         }
-        toPresent.modalPresentationStyle = .custom
-        router.present(toPresent)
+        let navController = UINavigationController(rootViewController: toPresent)
+        router.present(navController, animated: true, style: .popover)
     }
 }
 
