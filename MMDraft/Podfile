@@ -1,0 +1,12 @@
+platform :ios, '12.0'
+
+target 'MMDraft' do
+  use_frameworks!
+
+  pod 'R.swift'
+  pod 'Alamofire'
+  pod 'SwiftLint'
+  pod 'SnapKit'
+  pod 'Kingfisher'
+
+end
